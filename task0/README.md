@@ -1,10 +1,10 @@
 # Docker Task 0
 
 ## Dockerfile Content
--FROM ubuntu:latest
--RUN apt-get update
--RUN apt-get upgrade -y
--CMD ["echo", "Hello, World!"]
+- FROM ubuntu:latest
+- RUN apt-get update
+- RUN apt-get upgrade -y
+- CMD ["echo", "Hello, World!"]
 
 text
 
