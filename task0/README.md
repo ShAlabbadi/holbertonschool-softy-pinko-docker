@@ -1,24 +1,18 @@
-# Docker Task 0
+# Task 0: Docker Hello World
 
-## Dockerfile Content
-- FROM ubuntu:latest
-- RUN apt-get update
-- RUN apt-get upgrade -y
-- CMD ["echo", "Hello, World!"]
+## Description
+This project creates a Docker image based on Ubuntu that updates packages, upgrades software, and outputs "Hello, World!" when run.
 
-text
+## Dockerfile
+```dockerfile
+# Use the latest Ubuntu as base image
+FROM ubuntu:latest
 
-## Purpose
-- Uses Ubuntu latest as base image
-- Updates APT package list
-- Upgrades installed packages
-- Outputs "Hello, World!" when run
+# Update APT package list
+RUN apt-get update
 
-## Build Command
-`docker build -t softy-pinko:task0 .`
+# Upgrade installed packages (with -y to auto-confirm)
+RUN apt-get upgrade -y
 
-## Run Command  
-`docker run --rm softy-pinko:task0`
-
-## Expected Output
-`Hello, World!`
+# Set the default command to echo "Hello, World!"
+CMD ["echo", "Hello, World!"]
